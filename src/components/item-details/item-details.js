@@ -8,9 +8,10 @@ export default class ItemDetails extends React.Component {
 
     state = {
         id: null,
-        item: {},
+        item: null,
         image: null
     }
+
 
     componentDidMount() {
         this.updateItem()
@@ -24,6 +25,9 @@ export default class ItemDetails extends React.Component {
 
     updateItem = () => {
         const {itemId, getData, getImageUrl} = this.props;
+        if (!itemId) {
+            return;
+        }
         getData(itemId)
             .then((item) => {
                 this.setState({
@@ -37,7 +41,11 @@ export default class ItemDetails extends React.Component {
 
     render() {
         const {name, item, image} = this.state;
-        console.log(image)
+
+        if (item===null) {
+            return <span>Select a item from a list</span>;
+        }
+
         return (
             <div className="person-details card">
                 <img className="person-image"

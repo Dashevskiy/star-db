@@ -1,6 +1,7 @@
 .people-page {
   display: flex;
   justify-content: space-between;
+  padding: 1% 5%;
 }
 
 /*# sourceMappingURL=people-page.css.map */

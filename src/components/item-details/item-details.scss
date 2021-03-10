@@ -3,12 +3,13 @@
   margin-top: 1rem;
   flex-direction: row;
   padding: 1rem;
+  width: 50%;
 }
 
 .person-details .person-image {
   border-radius: 10px;
-  max-width: 30%;
-  height: auto;
+
+  height: 40%;
 }
 
 .person-details .list-group-item {
